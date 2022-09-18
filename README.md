@@ -1,5 +1,1 @@
-Dependecies
-qbcore framework
-qb-target
-PolyZone
-unvisible-taskbar [Available at my other repository]
+https://github.com/qbcore-framework
