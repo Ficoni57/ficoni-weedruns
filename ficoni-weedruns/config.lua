@@ -4,10 +4,10 @@ Config.WashMoney = true
 
 Config.MarkedBills = 100
 
-Config.RollMinPayout = 20
-Config.RollMaxPayout = 25
+Config.RollMinimum = 20
+Config.RollMaximum = 25
 Config.CashRollChance = 10
 
-Config.BandMinPayout = 80
-Config.BandMaxPayout = 100
+Config.BandMinimum = 80
+Config.BandMaximum = 100
 Config.BandNotesChance = 15
