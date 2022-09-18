@@ -36,6 +36,7 @@ Go to qb-core/shared/items.lua and add
 
 - Cooldown
 - Police Alert Chance
+- New Ped To Pack Weed (Creating A New Weed Plant Script)
 
 ## Optimization
 
