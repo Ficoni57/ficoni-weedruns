@@ -24,7 +24,7 @@ RegisterServerEvent('givememoneybro', function()
 			if rollchance < Config.CashRollChance then
 				if hasCashRolls then
 					cashrollworth = math.random(Player.Functions.GetItemByName("rolls").amount)
-					Player.Functions.AddMoney('cash', cashrollworth*math.random(Config.RollMinPayout, Config.RollMaxPayout))
+					Player.Functions.AddMoney('cash', cashrollworth*math.random(Config.RollMinimum, Config.RollMaximum))
 
 					Player.Functions.RemoveItem("rolls", cashrollworth)
 					TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items["rolls"], "remove")
@@ -34,7 +34,7 @@ RegisterServerEvent('givememoneybro', function()
 			if rollchance < Config.BandNotesChance then
 				if hasBandNotes then
 					bandnotesworth = math.random(Player.Functions.GetItemByName("bands").amount)
-					Player.Functions.AddMoney('cash', bandnotesworth*math.random(Config.BandMinPayout, Config.BandMaxPayout))
+					Player.Functions.AddMoney('cash', bandnotesworth*math.random(Config.BandMinimum, Config.BandMaximum))
 
 					Player.Functions.RemoveItem("bands", bandnotesworth)
 					TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items["bands"], "remove")
