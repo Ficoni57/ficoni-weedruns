@@ -2,7 +2,6 @@ local QBCore = exports['qb-core']:GetCoreObject()
 
 RegisterServerEvent('givememoneybro', function()
 	local Player = QBCore.Functions.GetPlayer(source)
-	local ply = QBCore.Functions.GetPlayer(source)
 	local hasMarkedBills = Player.Functions.GetItemByName("markedbills")
 	local hasBandNotes = Player.Functions.GetItemByName("bands")
 	local hasCashRolls = Player.Functions.GetItemByName("rolls")
