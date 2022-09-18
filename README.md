@@ -33,4 +33,4 @@ Go to qb-core/shared/items.lua and add
 ```
 ## Optimization
 
-Script runs when not in use 0.0 ms while in use only when selling package 0.01/0.02
+Script runs when not in use 0.0 MS while in use only when selling package 0.01 MS
