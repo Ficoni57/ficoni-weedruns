@@ -306,7 +306,7 @@ AddEventHandler("deliverpackage", function()
             TaskTurnPedToFaceEntity(deliveryPed, PlayerPedId(), 0)
             exports['qb-target']:RemoveZone("WeedRunNPC")
 	    	if WeedRun and QBCore.Functions.HasItem("weedpackage") then 
-	    		if QBCore.Functions.HasItem("weedpackage") then
+	        if QBCore.Functions.HasItem("weedpackage") then
                    FreezeEntityPosition(PlayerPedId(), true)
                     success = true
                     local finished = exports["unvisible-taskbar"]:taskBar(15000,"Weighing package")
@@ -333,7 +333,7 @@ AddEventHandler("deliverpackage", function()
 	    end
 	end
 	    local coordsofped = GetEntityCoords(deliveryPed)
-	    if success and not NoItem then
+	    if success and not NoItem and QBCore.Functions.HasItem("weedpackage") then
             local finished = exports["unvisible-taskbar"]:taskBar(10000,"Counting bills")
             if (finished == 100) then
              giveAnim()
