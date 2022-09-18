@@ -31,6 +31,12 @@ Go to qb-core/shared/items.lua and add
     
 ["bands"]= {["name"] = "bands", ["label"] = "Band of Notes",["weight"] = 0, ["type"] = "item", ["image"] = "bands.png", ["unique"] = false, ["useable"] = false, ["shouldClose"] = false, ["combinable"] = nil, ["description"] = "Lots of low denominators - Indicates drug sales."},
 ```
+
+## Next Update
+
+- Cooldown
+- Police Alert Chance
+
 ## Optimization
 
 Script runs when not in use 0.0 MS while in use only when selling package 0.01 MS
