@@ -310,7 +310,7 @@ AddEventHandler("deliverpackage", function()
                    FreezeEntityPosition(PlayerPedId(), true)
                     success = true
                     local finished = exports["unvisible-taskbar"]:taskBar(15000,"Weighing package")
-                     if (finished == 100) then
+                     if (finished == 100) and QBCore.Functions.HasItem("weedpackage") then
 	    	        TriggerServerEvent("QBCore:Server:RemoveItem", "weedpackage", 1)
 	    	        TriggerEvent('inventory:client:ItemBox', QBCore.Shared.Items["weedpackage"], "remove") 
                     print('SUCCESS')
