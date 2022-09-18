@@ -309,7 +309,7 @@ AddEventHandler("deliverpackage", function()
 	    		if QBCore.Functions.HasItem("weedpackage") then
                    FreezeEntityPosition(PlayerPedId(), true)
                     success = true
-                    local finished = exports["clrp-taskbar"]:taskBar(15000,"Weighing package")
+                    local finished = exports["unvisible-taskbar"]:taskBar(15000,"Weighing package")
                      if (finished == 100) then
 	    	        TriggerServerEvent("QBCore:Server:RemoveItem", "weedpackage", 1)
 	    	        TriggerEvent('inventory:client:ItemBox', QBCore.Shared.Items["weedpackage"], "remove") 
@@ -334,7 +334,7 @@ AddEventHandler("deliverpackage", function()
 	end
 	    local coordsofped = GetEntityCoords(deliveryPed)
 	    if success and not NoItem then
-            local finished = exports["clrp-taskbar"]:taskBar(10000,"Counting bills")
+            local finished = exports["unvisible-taskbar"]:taskBar(10000,"Counting bills")
             if (finished == 100) then
              giveAnim()
 	    	PlayAmbientSpeech1(deliveryPed, "Generic_Thanks", "Speech_Params_Force_Shouted_Critical")
