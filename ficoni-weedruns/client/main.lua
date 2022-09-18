@@ -376,15 +376,16 @@ AddEventHandler("deliverpackage", function()
 	    	TriggerEvent("SellWeedPackage")
 	    else
             SendMail()
-			DeleteCreatedPed()
-	    	Wait(5000)
-			NoItem = false
-	    	tasking = false
-			handthegood = false
-	    	TriggerEvent("SellWeedPackage")
-	        end
+	    DeleteCreatedPed()
+	    Wait(5000)
+	    NoItem = false
+	    tasking = false
+	    handthegood = false
+	    TriggerEvent("SellWeedPackage")
+	    print('NO ITEM')
+	    end
         end
-	end
+     end
 end)
  
 function SendMail()
