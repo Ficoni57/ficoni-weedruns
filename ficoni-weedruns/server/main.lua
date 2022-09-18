@@ -1,11 +1,5 @@
 local QBCore = exports['qb-core']:GetCoreObject()
 
-local Cooldown = false
-local checkpackage = true
-local packagerecieved = false
-players = {}
-entities = {}
-
 RegisterServerEvent('givememoneybro', function()
 	local Player = QBCore.Functions.GetPlayer(source)
 	local ply = QBCore.Functions.GetPlayer(source)
