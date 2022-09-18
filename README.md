@@ -4,7 +4,7 @@ ficoni-weedruns is a qbus nopixel inspired weed run you can see everything on vi
 
 ## Showcase
 
-* [Video](https://github.com/qbcore-framework/qb-core)
+* [Video](https://www.youtube.com/watch?v=uyUGICzViGI)
 
 ## Dependency
 
