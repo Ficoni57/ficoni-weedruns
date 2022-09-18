@@ -16,7 +16,7 @@ ficoni-weedruns is a qbus nopixel inspired weed run you can see everything on vi
 
 ## Optional Dependency
 
-* [QBCore](https://github.com/qbcore-framework/qb-core)
+* [unvisible-taskbar](https://github.com/Ficoni57/unvisible-taskbar)
 
 ## How To Add Items
 
