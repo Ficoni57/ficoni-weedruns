@@ -22,7 +22,8 @@ ficoni-weedruns is a qbus nopixel inspired weed run you can see everything on vi
 
 Go to qb-core/shared/items.lua and add 
 
-```lua["weedpackage"]= {["name"] = "weedpackage", ["label"] = "Suspicious Package",["weight"] = 25000, ["type"] = "item", ["image"] = "weedpackage.png", ["unique"] = false, ["useable"] = false, ["shouldClose"] = true, ["combinable"] = nil, ["description"] = "Marked for Police Seizure"},
+```lua
+["weedpackage"]= {["name"] = "weedpackage", ["label"] = "Suspicious Package",["weight"] = 25000, ["type"] = "item", ["image"] = "weedpackage.png", ["unique"] = false, ["useable"] = false, ["shouldClose"] = true, ["combinable"] = nil, ["description"] = "Marked for Police Seizure"},
     
 ["deliverylist"]= {["name"] = "deliverylist", ["label"] = "Delivery List",["weight"] = 5000, ["type"] = "item", ["image"] = "deliverylist.png", ["unique"] = false, ["useable"] = false, ["shouldClose"] = true, ["combinable"] = nil, ["description"] = "A suspicious list with transport instructions. Marked for Police Seizure."},
 
