@@ -297,7 +297,7 @@ end)
 
 
 local handthegood = false 
-local NoItem = false
+local NoItem = nil
 RegisterNetEvent("deliverpackage")
 AddEventHandler("deliverpackage", function()
 	if not handthegood then 
@@ -305,15 +305,14 @@ AddEventHandler("deliverpackage", function()
         if DoesEntityExist(deliveryPed) and not IsEntityDead(deliveryPed) then
             TaskTurnPedToFaceEntity(deliveryPed, PlayerPedId(), 0)
             exports['qb-target']:RemoveZone("WeedRunNPC")
-	    	if WeedRun and QBCore.Functions.HasItem("weedpackage") then 
-	        if QBCore.Functions.HasItem("weedpackage") then
+	    	if WeedRun and QBCore.Functions.HasItem("weedpackage") then
+	    		if QBCore.Functions.HasItem("weedpackage") then
+                   NoItem = false
                    FreezeEntityPosition(PlayerPedId(), true)
-                    success = true
                     local finished = exports["unvisible-taskbar"]:taskBar(15000,"Weighing package")
-                     if (finished == 100) and QBCore.Functions.HasItem("weedpackage") then
-	    	        TriggerServerEvent("QBCore:Server:RemoveItem", "weedpackage", 1)
-	    	        TriggerEvent('inventory:client:ItemBox', QBCore.Shared.Items["weedpackage"], "remove") 
+                     if (finished == 100) then 
                     print('SUCCESS')
+                    success = true
 	    		else
                     FreezeEntityPosition(PlayerPedId(), false)
                     print('ERROR OR NO ITEM')
@@ -333,15 +332,18 @@ AddEventHandler("deliverpackage", function()
 	    end
 	end
 	    local coordsofped = GetEntityCoords(deliveryPed)
-	    if success and not NoItem and QBCore.Functions.HasItem("weedpackage") then
+	    if success and not NoItem  then
             local finished = exports["unvisible-taskbar"]:taskBar(10000,"Counting bills")
-            if (finished == 100) then
+            if (finished == 100) and QBCore.Functions.HasItem("weedpackage") then
              giveAnim()
+            TriggerServerEvent("QBCore:Server:RemoveItem", "weedpackage", 1)
+	    	TriggerEvent('inventory:client:ItemBox', QBCore.Shared.Items["weedpackage"], "remove") 
 	    	PlayAmbientSpeech1(deliveryPed, "Generic_Thanks", "Speech_Params_Force_Shouted_Critical")
             TriggerServerEvent('givememoneybro')
             print('SUCCESS2')
             FreezeEntityPosition(PlayerPedId(), false)
         else
+            NoItem = true
             FreezeEntityPosition(PlayerPedId(), false)
             print('ERROR OR NO ITEM')
             success = false
@@ -374,18 +376,19 @@ AddEventHandler("deliverpackage", function()
 			SendMail()
             salecount = salecount + 1 
 	    	TriggerEvent("SellWeedPackage")
-	    else
+            print('bte')
+	    elseif not NoItem and not success and not QBCore.Functions.HasItem("weedpackage") then
             SendMail()
-	    DeleteCreatedPed()
-	    Wait(5000)
-	    NoItem = false
-	    tasking = false
-	    handthegood = false
-	    TriggerEvent("SellWeedPackage")
-	    print('NO ITEM')
-	    end
+			DeleteCreatedPed()
+	    	Wait(5000)
+			NoItem = false
+	    	tasking = false
+			handthegood = false
+	    	TriggerEvent("SellWeedPackage")
+                    print('ERROR OR NO ITEM V2')
+	        end
         end
-     end
+	end
 end)
  
 function SendMail()
