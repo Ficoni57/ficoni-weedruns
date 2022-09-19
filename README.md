@@ -37,7 +37,7 @@ Go to qb-core/shared/items.lua and add
 ## How To Add Attach Weed On Player (If u have Renewed-Weaponscarry)
 
 ```lua
-   ["weedpackage"] = { carry = true, model = "hei_prop_heist_weed_block_01", bone = 28422, x = 0.01, y = -0.02, z = -0.12, xr = 0.0,  yr = 0.0, zr = 0.0, blockAttack = true, blockCar = true, blockRun = true},
+["weedpackage"] = { carry = true, model = "hei_prop_heist_weed_block_01", bone = 28422, x = 0.01, y = -0.02, z = -0.12, xr = 0.0,  yr = 0.0, zr = 0.0, blockAttack = true, blockCar = true, blockRun = true},
 ```
 
 ## Next Update
