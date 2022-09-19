@@ -34,6 +34,12 @@ Go to qb-core/shared/items.lua and add
 ["bands"]= {["name"] = "bands", ["label"] = "Band of Notes",["weight"] = 0, ["type"] = "item", ["image"] = "bands.png", ["unique"] = false, ["useable"] = false, ["shouldClose"] = false, ["combinable"] = nil, ["description"] = "Lots of low denominators - Indicates drug sales."},
 ```
 
+## How To Add Attach Weed On Player
+
+```lua
+   ["weedpackage"] = { carry = true, model = "hei_prop_heist_weed_block_01", bone = 28422, x = 0.01, y = -0.02, z = -0.12, xr = 0.0,  yr = 0.0, zr = 0.0, blockAttack = true, blockCar = true, blockRun = true},
+```
+
 ## Next Update
 
 - Cooldown
