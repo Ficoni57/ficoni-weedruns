@@ -10,13 +10,15 @@ ficoni-weedruns is a qbus nopixel inspired weed run you can see everything on vi
 
 * [PolyZone](https://github.com/mkafrin/PolyZone)
 
-* [ms-peds](https://github.com/MiddleSkillz/ms-peds)
+* [ms-peds](https://github.com/MiddleSkillz/ms-peds) (Only for spawning main start weed run ped)
+
+* [unvisible-taskbar](https://github.com/Ficoni57/unvisible-taskbar) 
 
 * [qb-target](https://github.com/qbcore-framework/qb-target)
 
 ## Optional Dependency
 
-* [unvisible-taskbar](https://github.com/Ficoni57/unvisible-taskbar) Or Make On Yours
+* [Renewed-Weaponscarry](https://github.com/Renewed-Scripts/Renewed-Weaponscarry) (If u want to have attached weedpackage on you)
 
 ## How To Add Items
 
