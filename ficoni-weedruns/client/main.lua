@@ -283,13 +283,10 @@ end)
 RegisterNetEvent("StartSellingWeed")
 AddEventHandler("StartSellingWeed", function()
 	if not WeedRun then	
-	    local NearNPC = exports["isPed"]:GetClosestNPC()
-	    PlayAmbientSpeech1(NearNPC, "Chat_Resp", "SPEECH_PARAMS_FORCE", 1)
 	    salecount = 0	
 	    WeedRun = true
 		TriggerEvent("SellWeedPackage")
-        TriggerServerEvent("QBCore:Server:RemoveItem", "deliverylist", 1)
-        TriggerEvent('inventory:client:ItemBox', QBCore.Shared.Items["deliverylist"], "remove")
+		TriggerServerEvent('deletedeliverylist')
 	else 
 		print('U ARE ALREADY DELIVERING')
 	end
@@ -336,8 +333,7 @@ AddEventHandler("deliverpackage", function()
             local finished = exports["unvisible-taskbar"]:taskBar(10000,"Counting bills")
             if (finished == 100) and QBCore.Functions.HasItem("weedpackage") then
              giveAnim()
-            TriggerServerEvent("QBCore:Server:RemoveItem", "weedpackage", 1)
-	    	TriggerEvent('inventory:client:ItemBox', QBCore.Shared.Items["weedpackage"], "remove") 
+			 TriggerServerEvent('deleteweedpackage')
 	    	PlayAmbientSpeech1(deliveryPed, "Generic_Thanks", "Speech_Params_Force_Shouted_Critical")
             TriggerServerEvent('givememoneybro')
             print('SUCCESS2')

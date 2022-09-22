@@ -1,5 +1,18 @@
 local QBCore = exports['qb-core']:GetCoreObject()
 
+
+RegisterServerEvent('deletedeliverylist', function()
+	local Player = QBCore.Functions.GetPlayer(source)
+	Player.Functions.RemoveItem('deliverylist', 1)
+	TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items["deliverylist"], "remove")
+end)
+
+RegisterServerEvent('deleteweedpackage', function()
+	local Player = QBCore.Functions.GetPlayer(source)
+	Player.Functions.RemoveItem('weedpackage', 1)
+	TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items["weedpackage"], "remove")
+end)
+
 RegisterServerEvent('givememoneybro', function()
 	local Player = QBCore.Functions.GetPlayer(source)
 	local hasMarkedBills = Player.Functions.GetItemByName("markedbills")
